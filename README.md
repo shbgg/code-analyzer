@@ -130,7 +130,7 @@ code-analyzer run --code "print('hello world')" --api-key your_api_key
 
 ### Usage inside Python
 
-**For detailed Python usage, check out the usage.ipynb file under the test folder.**
+**For detailed Python usage, check out the usage.ipynb file under the docs folder.**
 
 **First, select your code-analyzer kernel in your IDE.**
 

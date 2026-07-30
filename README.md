@@ -47,7 +47,7 @@ git clone https://github.com/shbgg/code-analyzer.git
 
 ```bash
 
-cd code_analyzer
+cd code-analyzer
 
 ```
 
@@ -59,6 +59,21 @@ conda env create -f environment.yaml
 
 ```
 
+- **Activate the Conda environment:**
+
+```bash
+
+conda activate code-analyzer
+
+```
+
+- **İnstall the analyzer with pip:**
+
+```bash
+
+pip install .
+
+```
 
 ## How to Use?
 **code-analyzer can be used both within Python and as a CLI tool.**
@@ -117,7 +132,7 @@ code-analyzer run --code "print('hello world')" --api-key your_api_key
 
 **For detailed Python usage, check out the usage.ipynb file under the test folder.**
 
-**First, select your code_analyzer kernel in your IDE.**
+**First, select your code-analyzer kernel in your IDE.**
 
 - **Import and instantiate the analyzer class:**
 
@@ -162,15 +177,15 @@ This allows you to easily bind the analyzer class to your own interfaces. If you
 
 Two different dataclass types can be passed to your callback function:
 
-* **NodeFlag** emits a NodeFlag object to the callback when a worker starts or finishes execution. This object contains two attributes:
-    * **flag**: if the flag attribute is True, it means the worker has started; if False, the worker has completed.
-    * **worker_name**: this attribute is the name of the worker emitting the NodeFlag object.
+* **NodeFlag:** emits a NodeFlag object to the callback when a worker starts or finishes execution. This object contains two attributes:
+    * **flag:** if the flag attribute is True, it means the worker has started; if False, the worker has completed.
+    * **worker_name:** this attribute is the name of the worker emitting the NodeFlag object.
     
-* **AnalysisReport** 
-    * **profiler_report**: report of the worker analyzing the code.
-    * **scorer_report**: report of the worker scoring code across specific attributes.
-    * **inspector_report**: report of the worker detecting errors in code and making recommendations.
-    * **final_report**: report of the worker compiling all reports into a single markdown-formatted report.
+* **AnalysisReport:** 
+    * **profiler_report:** report of the worker analyzing the code.
+    * **scorer_report:** report of the worker scoring code across specific attributes.
+    * **inspector_report:** report of the worker detecting errors in code and making recommendations.
+    * **final_report:** report of the worker compiling all reports into a single markdown-formatted report.
     
 - **A custom callback function can be defined as follows:**
 

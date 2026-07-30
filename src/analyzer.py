@@ -2,10 +2,10 @@ from langchain_community.document_loaders import TextLoader
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import dotenv_values, get_key, set_key
 from .state import AnalysisReport, NodeFlag
+from .graph import get_analyzer_graph
 from typing import Optional, Callable, Any
 from IPython.display import display, Image
 from platformdirs import user_cache_dir
-from .graph import get_analyzer_graph
 from pathlib import Path
 import os
 
